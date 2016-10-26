@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get 'static/(:action)', controller: :static, defaults: { action: 'index' }
+
 end
