@@ -1,10 +1,11 @@
 FactoryGirl.define do
   factory :developer do
     city
-    title       { FFaker::Lorem.phrase }
-    skills      { FFaker::Lorem.words 5 }
-    salary      { rand(1000) + 500 }
-    experience  ( rand(10) )
-    english     { rand 10 }
+    sequence(:title)  { |n| "developer title #{n}" }
+    skills            { 'java, ruby, backbone.js' }
+    salary            1777
+    experience        7
+    english           5
+    description       { FFaker::Lorem.paragraph 2 }
   end
 end
