@@ -1,0 +1,17 @@
+.row.developer
+  .col-sm-12
+    %h4= developer.title
+    %ul.list-inline.summary
+      %li.city
+        %strong= developer.city_name
+      %li.experience= experience developer.experience
+      %li.salary= number_to_currency developer.salary
+
+    %p.skills
+      %strong
+        = developer.skills
+
+    %p.description
+      = simple_format developer.description
+
+    %hr
