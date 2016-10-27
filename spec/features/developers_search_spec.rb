@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 describe 'Developer Search' do
-  context 'with keyword' do
+  context 'search' do
     before do
       @dev1 = create :developer, title: 'Ruby on Rails developer'
       @dev2 = create :developer, title: 'Java developer'
     end
 
-    specify 'should search by developer title' do
+    specify 'by keyword in a title' do
       visit developers_path
 
       fill_in 'keyword', with: 'ruby'

@@ -1,0 +1,5 @@
+%li
+  - if selected_city == city
+    .selected= city.name
+  - else
+    = link_to city.name, {city: city.id}

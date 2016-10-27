@@ -3,7 +3,7 @@
   %h1.page-header Developers
 
   .col-md-3
-    -#= render 'sidebar'
+    = render 'sidebar_cities', cities: @cities, selected_city: @selected_city
 
   .col-md-9
     = render 'search'

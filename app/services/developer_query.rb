@@ -10,10 +10,14 @@ class DeveloperQuery
   end
 
   def query
-    Developer.where("title LIKE ?", "%#{keyword}%")
+    Developer.by_keyword(keyword).by_city(city)
   end
 
   def keyword
     params[:keyword]
+  end
+
+  def city
+    params[:city]
   end
 end
