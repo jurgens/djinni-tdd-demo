@@ -8,4 +8,4 @@
   .col-md-9
     = render 'search'
 
-    = render partial: 'developer', collection: @developers
+    = render(partial: 'developer', collection: @developers) || 'No results'
