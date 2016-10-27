@@ -1,0 +1,6 @@
+.well
+  %form.form-inline
+    .form-group
+      = text_field_tag 'keyword', @keyword, placeholder: 'Example: Ruby', class: 'form-control'
+
+    %button.btn.btn-primary{ type: 'submit' } Search
