@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  resource :developers
+
   get 'static/(:action)', controller: :static, defaults: { action: 'index' }
 
 end
